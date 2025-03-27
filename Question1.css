@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background:linear-gradient(-300deg, dodgerblue 0%, aliceblue 100%) ;
+    margin: 0;
+    padding: 0;
+    color: grey;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+h1 {
+    color: black;
+    font-family: 'Lobster', cursive;
+    margin-bottom: 35px;
+    font-weight: 750;
+    font-size: 40px;
+    text-shadow: 0 0 15px;
+}
+h1 span {
+    color: dodgerblue;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    gap: 25px;
+}
+
+input {
+    padding: 10px 15px;
+    width: 300px;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 0 15px;
+    border:2px solid dodgerblue;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.5s ease-in-out;
+}
+
+button:hover {
+    border-color: green;
+    background-color: green;
+    color: white;
+    border: 2px solid green;
+    border-radius: 8px;
+    transform: scale(1.15);
+    box-shadow: black;
+    font-size: 20px solid;
+}
+
+.loader {
+    border: 6px solid white;
+    border-top: 6px solid dodgerblue;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 30px auto;
+    display: none;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.meal-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px black;
+    padding: 40px;
+    margin: 29px 0;
+    text-align: left;
+    transition: transform 0.8s ease-in-out;
+}
+
+.meal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 10px 10px 10px black;
+}
+
+.meal-card img {
+    max-width: 100%;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0 0 5px black;
+}
+.meal-card h2 {
+    color: darkslategrey;
+    margin-top: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.meal-card p {
+    margin: 10px 0;
+    line-height: 1.7;
+    font-size: 18px;
+    position: justify;
+}
+.error-message {
+    color: red;
+    font-weight: bold;
+    margin: 20px 0;
+}
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    input {
+        width: 100%;
+    }
+    
+    button {
+        width: 100%;
+    }
+}
+#Error{
+    text-shadow: 0 0 1px black; 
+}
